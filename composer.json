@@ -1,0 +1,88 @@
+{
+    "name": "cu-boulder/site-template",
+    "description": "Project template for Drupal 9",
+    "type": "project",
+    "license": "GPL-2.0-or-later",
+    "homepage": "https://www.drupal.org/project/drupal",
+    "support": {
+        "docs": "https://www.drupal.org/docs/user_guide/en/index.html",
+        "chat": "https://www.drupal.org/node/314178"
+    },
+    "repositories": [
+        {
+            "type": "composer",
+            "url": "https://packages.drupal.org/8"
+        },
+        {
+            "url": "https://github.com/CuBoulder/ucb2019_base.git",
+            "type": "git"
+        },
+        {
+            "type": "git",
+            "url" : "https://github.com/CuBoulder/drupal_yourls.git"
+        }
+    ],
+    "require": {
+        "composer/installers": "^1.9",
+        "drupal/core-composer-scaffold": "^9.1",
+        "drupal/core-recommended": "^9.1",
+        "cu-boulder/ucb2019_base": "dev-main",
+        "cu-boulder/drupal_yourls": "dev-main",
+        "drupal/simplesamlphp_auth": "^3.1",
+        "drupal/smtp": "^1.0",
+        "drupal/webform": "^6.0",
+        "simplesamlphp/simplesamlphp": "^1.18",
+        "drush/drush": "^10.0"
+    },
+    "require-dev": {
+        "phpspec/prophecy-phpunit":"^2",
+        "drupal/core-dev": "^9.1"
+    },
+    "conflict": {
+        "drupal/drupal": "*"
+    },
+    "minimum-stability": "stable",
+    "prefer-stable": true,
+    "config": {
+        "sort-packages": true,
+        "platform": {
+            "php": "7.4"
+        }
+    },
+    "extra": {
+        "drupal-scaffold": {
+            "locations": {
+                "web-root": "."
+            }
+        },
+        "installer-paths": {
+            "core": [
+                "type:drupal-core"
+            ],
+            "libraries/{$name}": [
+                "type:drupal-library"
+            ],
+            "modules/contrib/{$name}": [
+                "type:drupal-module"
+            ],
+            "profiles/contrib/{$name}": [
+                "type:drupal-profile"
+            ],
+            "themes/contrib/{$name}": [
+                "type:drupal-theme"
+            ],
+            "drush/Commands/contrib/{$name}": [
+                "type:drupal-drush"
+            ],
+            "modules/custom/{$name}": [
+                "type:drupal-custom-module"
+            ],
+            "profiles/custom/{$name}": [
+                "type:drupal-custom-profile"
+            ],
+            "themes/custom/{$name}": [
+                "type:drupal-custom-theme"
+            ]
+        }
+    }
+}
