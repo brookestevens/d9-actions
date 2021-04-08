@@ -49,6 +49,10 @@ jobs:
     steps:
       - name: Checkout Code
         uses: actions/checkout@v2
+      - name: Validate composer.json
+        run: composer validate
+      - name: Build Project
+        run: composer install
       - name: Lint Code
         uses: overtrue/phplint@master
         with:
