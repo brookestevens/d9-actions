@@ -41,6 +41,8 @@ jobs:
       #     --account-name="admin" --account-pass="password"
       #     install_configure_form.enable_update_status_module=NULL
       #     install_configure_form.enable_update_status_emails=NULL
+      - name: Run PHP Unit Tests
+        run: ./vendor/bin/phpunit -c ./phpunit.xml --testsuite unit
   phplint:
     name: Lint Code
     runs-on: ubuntu-latest
@@ -51,12 +53,3 @@ jobs:
         uses: overtrue/phplint@master
         with:
           path: ./modules/contrib
-  phpunit:
-    name: Test Site
-    needs: build
-    runs-on: ubuntu-latest
-    steps:
-      - name: Run PHP Unit
-        run: ./vendor/bin/phpunit -c ./phpunit.xml --testsuite unit
-        # env:
-        #   DB_PORT: ${{ job.services.mysql.ports[3306] }}
