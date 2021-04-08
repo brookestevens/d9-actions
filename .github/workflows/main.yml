@@ -43,6 +43,7 @@ jobs:
       #     install_configure_form.enable_update_status_emails=NULL
   phplint:
     name: Lint Code
+    runs-on: ubuntu-latest
     steps:
       - name: Checkout Code
         uses: actions/checkout@v2
