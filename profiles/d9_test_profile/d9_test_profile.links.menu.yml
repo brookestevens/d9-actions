@@ -1,0 +1,4 @@
+d9_test_profile.front_page:
+  title: 'Home'
+  route_name: '<front>'
+  menu_name: main
