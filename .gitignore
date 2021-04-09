@@ -18,9 +18,7 @@
 /vendor/
 /core/
 /modules/
-/profiles/
 /themes/
-
 
 # Ignore configuration files that may contain sensitive information.
 sites/*/settings*.php
@@ -36,3 +34,4 @@ sites/simpletest
 
 /autoload.php
 /example.gitignore
+/INSTALL.txt
