@@ -1,0 +1,22 @@
+uuid: 58dc60b3-b2bf-43a8-a087-74edaefb4c34
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - ucb2019_base
+_core:
+  default_config_hash: KHQIJ7Vfl25lTjzIc7qIvnuistt-Mw2O0kG4jCofmkI
+id: ucb2019_base_messages
+theme: ucb2019_base
+region: header
+weight: 0
+provider: null
+plugin: system_messages_block
+settings:
+  id: system_messages_block
+  label: 'Status messages'
+  provider: system
+  label_display: '0'
+visibility: {  }

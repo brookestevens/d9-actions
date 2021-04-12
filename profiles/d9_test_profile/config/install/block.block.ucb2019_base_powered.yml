@@ -1,0 +1,22 @@
+uuid: 695a6695-75ac-4d1e-b080-ab4f5935de31
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - ucb2019_base
+_core:
+  default_config_hash: jQQUUWN2Uxr5qZtc9zcJKBCxpKY8orN1u2HPqYYRQDI
+id: ucb2019_base_powered
+theme: ucb2019_base
+region: header
+weight: 10
+provider: null
+plugin: system_powered_by_block
+settings:
+  id: system_powered_by_block
+  label: 'Powered by Drupal'
+  provider: system
+  label_display: '0'
+visibility: {  }

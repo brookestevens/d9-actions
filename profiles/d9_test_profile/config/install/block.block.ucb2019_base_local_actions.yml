@@ -1,0 +1,20 @@
+uuid: 0551ad46-b766-4852-aa0e-1f3e75050fa0
+langcode: en
+status: true
+dependencies:
+  theme:
+    - ucb2019_base
+_core:
+  default_config_hash: 13GQpeITIJsp1kyPniXtWZfyFH87vb1xxJCHifL4UeE
+id: ucb2019_base_local_actions
+theme: ucb2019_base
+region: content
+weight: -20
+provider: null
+plugin: local_actions_block
+settings:
+  id: local_actions_block
+  label: 'Primary admin actions'
+  provider: core
+  label_display: '0'
+visibility: {  }

@@ -1,0 +1,25 @@
+uuid: 922cbcc4-4287-4f85-b375-28726222d5aa
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - ucb2019_base
+_core:
+  default_config_hash: NDwadleLD3YVSbDUaakxyYZyINYtkFtOVGShfq4kWy8
+id: ucb2019_base_branding
+theme: ucb2019_base
+region: header
+weight: 0
+provider: null
+plugin: system_branding_block
+settings:
+  id: system_branding_block
+  label: 'Site branding'
+  provider: system
+  label_display: '0'
+  use_site_logo: true
+  use_site_name: true
+  use_site_slogan: true
+visibility: {  }
