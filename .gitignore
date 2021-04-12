@@ -35,3 +35,7 @@ sites/simpletest
 /autoload.php
 /example.gitignore
 /INSTALL.txt
+
+# Other files
+/vfs:
+.DS_Store
