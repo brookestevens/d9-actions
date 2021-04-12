@@ -38,6 +38,9 @@
         "phpspec/prophecy-phpunit":"^2",
         "drupal/core-dev": "^9.1"
     },
+    "scripts": {
+        "test": "phpunit -c phpunit.xml --testsuite unit"
+    },
     "conflict": {
         "drupal/drupal": "*"
     },
@@ -46,7 +49,7 @@
     "config": {
         "sort-packages": true,
         "platform": {
-            "php": "7.4"
+            "php": "7.3.0"
         }
     },
     "extra": {
