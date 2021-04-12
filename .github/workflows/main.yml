@@ -42,7 +42,7 @@ jobs:
       #     install_configure_form.enable_update_status_module=NULL
       #     install_configure_form.enable_update_status_emails=NULL
       - name: Run PHP Unit Tests
-        run: ./vendor/bin/phpunit -c ./phpunit.xml --testsuite unit
+        run: composer test
   phplint:
     name: Lint Code
     runs-on: ubuntu-latest
