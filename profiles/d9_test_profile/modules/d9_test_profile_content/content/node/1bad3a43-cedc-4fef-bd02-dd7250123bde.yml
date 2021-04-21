@@ -1,0 +1,32 @@
+_meta:
+  version: '1.0'
+  entity_type: node
+  uuid: 1bad3a43-cedc-4fef-bd02-dd7250123bde
+  bundle: page
+  default_langcode: en
+  depends:
+    e754a870-a814-43a5-999d-5fff1b4a8042: file
+default:
+  revision_uid:
+    - target_id: 1
+  status:
+    - value: true
+  uid:
+    - target_id: 1
+  title:
+    - value: 'Nextpress Demo Page'
+  created:
+    - value: 1618860672
+  promote:
+    - value: false
+  sticky:
+    - value: false
+  revision_translation_affected:
+    - value: true
+  path:
+    - alias: ''
+      langcode: en
+  body:
+    - value: "<p><img alt=\"Campus Aerial Shot\" data-entity-type=\"file\" data-entity-uuid=\"e754a870-a814-43a5-999d-5fff1b4a8042\" height=\"441\" src=\"/sites/default/files/inline-images/campus_aerial.jpg\" width=\"1103\" /></p>\r\n\r\n<p>Welcome to the next version of Web Express!&nbsp;We plan to provide site builders with all of the necessary features and tools to build highly customizable websites for CU.&nbsp;</p>\r\n\r\n<h2>Heading 2</h2>\r\n\r\n<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lacus laoreet non curabitur gravida. Et leo duis ut diam quam nulla porttitor. Pellentesque habitant morbi tristique senectus et netus et malesuada fames. At elementum eu facilisis sed odio morbi quis commodo odio. Lobortis elementum nibh tellus molestie nunc. Sed libero enim sed faucibus. Blandit turpis cursus in hac habitasse platea dictumst quisque sagittis. Consectetur adipiscing elit ut aliquam purus sit amet. Mattis ullamcorper velit sed ullamcorper morbi tincidunt ornare. Ut tellus elementum sagittis vitae et leo duis ut diam. Tempus urna et pharetra pharetra massa. Pulvinar mattis nunc sed blandit libero volutpat sed. Erat pellentesque adipiscing commodo elit at imperdiet dui. Sapien pellentesque habitant morbi tristique senectus et netus.</p>\r\n\r\n<p>Nibh venenatis cras sed felis. Euismod nisi porta lorem mollis aliquam ut porttitor leo. Massa eget egestas purus viverra accumsan in nisl. Lorem sed risus ultricies tristique nulla aliquet. Faucibus ornare suspendisse sed nisi lacus sed viverra tellus in. Arcu dui vivamus arcu felis bibendum ut tristique et egestas. Mattis vulputate enim nulla aliquet. Cursus eget nunc scelerisque viverra mauris in aliquam sem fringilla. Ultrices vitae auctor eu augue ut lectus arcu. Egestas integer eget aliquet nibh praesent. Nisi lacus sed viverra tellus in. Morbi leo urna molestie at elementum eu.</p>\r\n\r\n<p>Adipiscing enim eu turpis egestas pretium aenean pharetra. Auctor eu augue ut lectus. Facilisis gravida neque convallis a cras semper auctor. Parturient montes nascetur ridiculus mus mauris. Tincidunt ornare massa eget egestas purus viverra accumsan. Urna nec tincidunt praesent semper feugiat nibh sed. Tortor dignissim convallis aenean et tortor at risus viverra. Eu nisl nunc mi ipsum faucibus vitae aliquet nec. Mattis nunc sed blandit libero volutpat sed cras ornare arcu. Elit ullamcorper dignissim cras tincidunt lobortis. Vestibulum lectus mauris ultrices eros in. Eleifend mi in nulla posuere. Amet cursus sit amet dictum sit amet justo donec enim. Consectetur lorem donec massa sapien faucibus et molestie ac feugiat. Convallis convallis tellus id interdum velit laoreet id donec. Habitant morbi tristique senectus et netus. Ullamcorper eget nulla facilisi etiam.</p>\r\n\r\n<h2>Another Heading</h2>\r\n\r\n<p>Tortor pretium viverra suspendisse potenti nullam ac tortor vitae purus. In massa tempor nec feugiat nisl pretium fusce id. Nisi scelerisque eu ultrices vitae auctor. Sed faucibus turpis in eu mi. Vitae nunc sed velit dignissim sodales ut eu. Leo duis ut diam quam nulla porttitor massa. Phasellus faucibus scelerisque eleifend donec pretium vulputate. Risus at ultrices mi tempus imperdiet nulla. Justo donec enim diam vulputate ut pharetra sit. Orci porta non pulvinar neque laoreet. Diam vulputate ut pharetra sit amet. Eu facilisis sed odio morbi quis commodo odio aenean sed.</p>\r\n\r\n<p>Sit amet luctus venenatis lectus magna fringilla urna porttitor. Nisi est sit amet facilisis magna. Nibh tortor id aliquet lectus proin nibh nisl. In iaculis nunc sed augue lacus. Malesuada fames ac turpis egestas sed tempus urna et. Sodales ut etiam sit amet. Fermentum iaculis eu non diam phasellus vestibulum lorem sed. Lorem sed risus ultricies tristique. Turpis massa tincidunt dui ut ornare lectus sit amet est. Senectus et netus et malesuada fames ac turpis egestas maecenas. Est velit egestas dui id ornare arcu odio. Enim lobortis scelerisque fermentum dui faucibus in ornare quam. Lectus nulla at volutpat diam. Facilisis leo vel fringilla est ullamcorper eget nulla facilisi. Facilisi nullam vehicula ipsum a arcu.</p>\r\n"
+      format: basic_html
+      summary: ''

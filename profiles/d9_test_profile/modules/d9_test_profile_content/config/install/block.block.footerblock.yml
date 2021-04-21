@@ -1,0 +1,24 @@
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:76c56ae4-5624-4e63-a732-0a95d735dcd1'
+  module:
+    - block_content
+  theme:
+    - ucb2019_base
+id: footerblock
+theme: ucb2019_base
+region: footer
+weight: 0
+provider: null
+plugin: 'block_content:76c56ae4-5624-4e63-a732-0a95d735dcd1'
+settings:
+  id: 'block_content:76c56ae4-5624-4e63-a732-0a95d735dcd1'
+  label: 'Footer Block'
+  provider: block_content
+  label_display: '0'
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }

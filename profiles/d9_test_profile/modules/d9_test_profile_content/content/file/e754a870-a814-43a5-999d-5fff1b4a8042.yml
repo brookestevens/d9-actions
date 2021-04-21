@@ -1,0 +1,20 @@
+_meta:
+  version: '1.0'
+  entity_type: file
+  uuid: e754a870-a814-43a5-999d-5fff1b4a8042
+  default_langcode: en
+default:
+  uid:
+    - target_id: 1
+  filename:
+    - value: campus_aerial.jpg
+  uri:
+    - value: 'public://inline-images/campus_aerial.jpg'
+  filemime:
+    - value: image/jpeg
+  filesize:
+    - value: 180440
+  status:
+    - value: true
+  created:
+    - value: 1618861034

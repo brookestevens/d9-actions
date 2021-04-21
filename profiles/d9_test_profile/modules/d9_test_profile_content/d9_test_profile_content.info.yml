@@ -1,0 +1,15 @@
+name: Profile Default Content
+type: module
+description: 'Some default content for this profile'
+package: Custom
+hidden: true
+core_version_requirement: '^8.8 || ^9'
+dependencies:
+  - default_content
+default_content:
+  node:
+    - 1bad3a43-cedc-4fef-bd02-dd7250123bde
+  block_content:
+    - 76c56ae4-5624-4e63-a732-0a95d735dcd1
+  file:
+    - e754a870-a814-43a5-999d-5fff1b4a8042

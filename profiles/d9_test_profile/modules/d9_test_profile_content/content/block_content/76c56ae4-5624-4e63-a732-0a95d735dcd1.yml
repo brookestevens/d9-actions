@@ -1,0 +1,19 @@
+_meta:
+  version: '1.0'
+  entity_type: block_content
+  uuid: 76c56ae4-5624-4e63-a732-0a95d735dcd1
+  bundle: basic
+  default_langcode: en
+default:
+  status:
+    - value: true
+  info:
+    - value: 'Footer Block'
+  reusable:
+    - value: true
+  revision_translation_affected:
+    - value: true
+  body:
+    - value: "<div class=\"container\">\r\n<div class=\"row\">\r\n<div class=\"col-lg-4 col-md-4 col-sm-6 col-xs-12\"><a href=\"/\"> Web Express </a> is a resource provided by <a href=\"https://www.colorado.edu/strategicrelations\">Strategic Relations and Communications</a>.</div>\r\n\r\n<div class=\"col-log-4 col-md-4 col-sm-6 col-xs-12 offset-lg-4 offset-md-4\">\r\n<div class=\"ucb-footer\">\r\n<p><a href=\"https://www.colorado.edu\"><img alt=\"Be Boulder.\" class=\"ucb-footer-be-boulder\" src=\"https://cdn.colorado.edu/static/brand-assets/live/images/be-boulder-white.svg\" /></a></p>\r\n\r\n<p><a class=\"ucb-home-link\" href=\"https://www.colorado.edu\">University of Colorado Boulder</a></p>\r\n\r\n<p>© Regents of the University of Colorado</p>\r\n\r\n<p class=\"ucb-footer-links\"><a href=\"http://www.colorado.edu/about/privacy-statement\">Privacy</a> • <a href=\"http://www.colorado.edu/about/legal-trademarks\">Legal &amp; Trademarks</a> • <a href=\"http://www.colorado.edu/map\">Campus Map</a></p>\r\n</div>\r\n</div>\r\n</div>\r\n</div>\r\n"
+      format: full_html
+      summary: ''
