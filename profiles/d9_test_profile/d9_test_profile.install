@@ -17,7 +17,7 @@ use Drupal\shortcut\Entity\Shortcut;
 function d9_test_profile_install() {
   // Assign user 1 the "administrator" role.
   $user = User::load(1);
-  $user->roles[] = 'administrator';
+  $user->addRole('administrator');
   $user->save();
 
   // We install some menu links, so we have to rebuild the router, to ensure the
@@ -40,4 +40,18 @@ function d9_test_profile_install() {
     'link' => ['uri' => 'internal:/admin/content'],
   ]);
   $shortcut->save();
+
+  /**
+   * Create inital users for the development team
+   */
+  $users = ['user', 'user2', 'user3', 'user4'];
+  foreach( $users as $i ){
+    User::create([
+      'name' => $i,
+      'mail' => "{$i}@example.com",
+      'pass' => 'password',
+      'status' => 1,
+      'roles' => 'administrator'
+    ])->enforceIsNew()->save();
+  }
 }
