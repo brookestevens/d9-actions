@@ -24,3 +24,29 @@ function d9_test_profile_form_install_configure_submit($form, FormStateInterface
   $site_mail = $form_state->getValue('site_mail');
   ContactForm::load('feedback')->setRecipients([$site_mail])->trustData()->save();
 }
+
+/**
+ * Implements hook_modules_installed().
+ *
+ * @param $modules
+ * Install syslog and uninstall dblog if site is not local
+ * Install default content for the site
+ */
+function d9_test_profile_modules_installed( $modules ){
+  if( in_array('d9_test_profile', $modules )){
+    $installer = \Drupal::service('module_installer');
+    if( isset($_SERVER['LANDO']) ){
+      \Drupal::logger('TEST PROFILE')->notice('Performed install task: Detect enviornment [local] ');
+    }
+    else{
+      \Drupal::logger('TEST PROFILE')->notice('Performed install task: Detect enviornment [prod] ');
+      $installer->uninstall(['dblog']);
+      $installer->install(['syslog']);
+      // configure syslog here
+      \Drupal::logger('TEST PROFILE')->notice('Performed install task: Install syslog and uninstall dblog');
+    }
+    // Install default content
+    $installer->install(['d9_test_profile_content']);
+    \Drupal::logger('TEST PROFILE')->notice('Performed install task: Import default content');
+  }
+}
