@@ -3,6 +3,7 @@ recipe: lamp
 tooling:
   drush:
     description: Run drush commands
+    service: appserver
     cmd: "/app/vendor/bin/drush --root=/app"
   install-site:
     description: Install A Drupal 9 site with the Testing Profile
