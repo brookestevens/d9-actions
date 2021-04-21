@@ -31,13 +31,15 @@ install:
   - ckeditor
   - webform
   - webform_ui
-
+  - admin_toolbar
+  - admin_toolbar_tools
 # Required modules
 # Note that any dependencies of the modules listed here will be installed automatically.
 dependencies:
   - node
   - block
   - views
+  - default_content
 
 # List any themes that should be installed as part of the profile installation.
 # Note that this will not set any theme as the default theme.
