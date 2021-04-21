@@ -31,7 +31,9 @@
         "drupal/simplesamlphp_auth": "^3.1",
         "drupal/smtp": "^1.0",
         "drupal/webform": "^6.0",
+        "drupal/admin_toolbar": "^3.0",
         "simplesamlphp/simplesamlphp": "^1.18",
+        "drupal/default_content": "^2.0@alpha",
         "drush/drush": "^10.0"
     },
     "require-dev": {
@@ -39,7 +41,8 @@
         "drupal/core-dev": "^9.1"
     },
     "scripts": {
-        "test": "phpunit -c phpunit.xml --testsuite unit"
+        "test": "phpunit -c phpunit.xml --testsuite unit",
+        "upgrade-drupal": "composer update drupal/core 'drupal/core-*' --with-all-dependencies && echo 'Run update script with drush updatedb\n' "
     },
     "conflict": {
         "drupal/drupal": "*"
