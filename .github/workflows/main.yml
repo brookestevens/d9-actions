@@ -45,14 +45,14 @@ jobs:
         run: composer test
   phplint:
     name: Lint Code
-    runs-on: ubuntu-latest
+    runs-on: self-hosted
     steps:
       - name: Checkout Code
         uses: actions/checkout@v2
       - name: Validate composer.json
-        run: composer validate
+        run: /usr/share/composer validate
       - name: Build Project
-        run: composer install
+        run: /usr/share/composer install
       - name: Lint Code
         uses: overtrue/phplint@master
         with:
