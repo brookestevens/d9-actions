@@ -54,8 +54,5 @@ jobs:
       - name: Build Project
         run: /usr/share/composer install
       - name: Lint Code
-        uses: overtrue/phplint@master
-        with:
-          path: ./modules/contrib
-          options: --no-configuration -w --jobs=10 -v
+        run: /usr/share/composer lint
 

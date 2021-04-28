@@ -39,3 +39,4 @@ sites/simpletest
 # Other files
 /vfs:
 .DS_Store
+.phplint-cache

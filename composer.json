@@ -37,11 +37,13 @@
         "drush/drush": "^10.0"
     },
     "require-dev": {
-        "phpspec/prophecy-phpunit":"^2",
-        "drupal/core-dev": "^9.1"
+        "drupal/core-dev": "^9.1",
+        "overtrue/phplint": "^2.3",
+        "phpspec/prophecy-phpunit": "^2"
     },
     "scripts": {
         "test": "phpunit -c phpunit.xml --testsuite unit",
+        "lint": "phplint -v",
         "upgrade-drupal": "composer update drupal/core 'drupal/core-*' --with-all-dependencies && echo 'Run update script with drush updatedb\n' "
     },
     "conflict": {
