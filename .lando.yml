@@ -15,6 +15,10 @@ tooling:
       --account-name="admin" --account-pass="password"
       install_configure_form.enable_update_status_module=NULL
       install_configure_form.enable_update_status_emails=NULL
+  behat:
+    description: Run Behat Tests
+    service: appserver
+    cmd: "/app/vendor/bin/behat -c behat.local.yml"
   test:
     description: Run Unit Tests with phpunit
     service: appserver
