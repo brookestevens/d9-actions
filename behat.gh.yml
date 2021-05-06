@@ -1,0 +1,23 @@
+default:
+  formatters:
+    pretty: true
+  suites:
+    content:
+      paths:
+        features: features
+        bootstrap: features/bootstrap
+      contexts:
+        - FeatureContext
+        - Drupal\DrupalExtension\Context\DrupalContext
+        - Drupal\DrupalExtension\Context\MinkContext
+        - Drupal\DrupalExtension\Context\MessageContext
+        - Drupal\DrupalExtension\Context\DrushContext
+  extensions:
+    Behat\MinkExtension:
+      base_url: http://192.168.50.5
+      goutte: ~
+    Drupal\DrupalExtension:
+      blackbox: ~
+      api_driver: 'drupal'
+      drupal:
+        drupal_root: '.'
