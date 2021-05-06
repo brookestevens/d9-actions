@@ -38,11 +38,13 @@
     },
     "require-dev": {
         "drupal/core-dev": "^9.1",
+        "drupal/drupal-extension": "~4.0",
         "overtrue/phplint": "^2.3",
         "phpspec/prophecy-phpunit": "^2"
     },
     "scripts": {
-        "test": "phpunit -c phpunit.xml --testsuite unit",
+        "test": "phpunit -c phpunit.xml --testsuite kernel --debug",
+        "behat": "behat -c behat.gh.yml -s content",
         "lint": "phplint -v",
         "upgrade-drupal": "composer update drupal/core 'drupal/core-*' --with-all-dependencies && echo 'Run update script with drush updatedb\n' "
     },
@@ -53,6 +55,7 @@
     "prefer-stable": true,
     "config": {
         "sort-packages": true,
+        "process-timeout": 0,
         "platform": {
             "php": "7.3.0"
         }
