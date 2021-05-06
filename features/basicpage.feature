@@ -1,3 +1,4 @@
+@api
 Feature: Create Basic Page
   In order to create new content
   As an administraor
@@ -8,7 +9,17 @@ Feature: Create Basic Page
     When I am on "node/add/page"
     Then I should see "Access denied"
 
-  @api
+  Scenario: The home page should have content
+    Given I am on the homepage
+    Then I should see the heading "Nextpress Demo Page"
+
+  Scenario:
+    Given I am on "/user/login"
+    When I fill in "Username" with "admin"
+    And I fill in "Password" with "password"
+    And I press "Log in"
+    Then I should be on "/user/1"
+
   Scenario: An administrator can create a basic page
     Given I am logged in as a user with the "administrator" role
     And I am at "node/add/page"
