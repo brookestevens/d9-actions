@@ -42,6 +42,15 @@ jobs:
       - name: Remove hardened permissions on sites directory
         run: sudo chmod -R 777 /home/vagrant/actions-runner/_work/d9-actions/d9-actions/sites
         continue-on-error: true
+      - name: Cache Vendor Files
+        uses: actions/cache@v2
+        env:
+          cache-name: cache-vendor
+        with:
+          path: ~/.cache/composer/files
+          key: ${{ runner.os }}-composer-${{ hashFiles('**/composer.lock') }}
+        restore-keys: |
+          ${{ runner.os }}-composer-
       - name: Checkout Code
         uses: actions/checkout@v2
       - name: Validate composer.json
