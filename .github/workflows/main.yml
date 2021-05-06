@@ -41,6 +41,7 @@ jobs:
     steps:
       - name: Remove hardened permissions on sites directory
         run: sudo chmod -R 777 /home/vagrant/actions-runner/_work/d9-actions/d9-actions/sites
+        continue-on-error: true
       - name: Checkout Code
         uses: actions/checkout@v2
       - name: Validate composer.json
