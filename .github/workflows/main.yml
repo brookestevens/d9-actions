@@ -5,54 +5,67 @@ on:
 env:
   COMPOSER_MEMORY_LIMIT: -1
 jobs:
-  build:
-    name: Install Dependencies
-    runs-on: ubuntu-latest
-    services:
-      mysql:
-        image: mysql:5.7
-        env:
-          MYSQL_ALLOW_EMPTY_PASSWORD: false
-          MYSQL_ROOT_PASSWORD: drupal9
-          MYSQL_DATABASE: drupal9
-        ports:
-          - 3306
-        options: --health-cmd="mysqladmin ping" --health-interval=10s --health-timeout=5s --health-retries=3
-    steps:
-      - name: Checkout Code
-        uses: actions/checkout@v2
-      - name: Set up PHP
-        uses: shivammathur/setup-php@v2
-        with:
-          php-version: '7.4'
-          extensions: mbstring, xml, ctype, iconv, intl, pdo_sqlite, mysql
-          tools: composer:v1
-      - name: Start mysql service
-        run: sudo /etc/init.d/mysql start
-      - name: Validate composer.json
-        run: composer validate
-      - name: Build Project
-        run: composer install
-      # - name: Install Site
-      #   run: >
-      #     echo yes | ./vendor/bin/drush si standard
-      #     --db-url="mysql://root:drupal9@127.0.0.1:${{ job.services.mysql.ports[3306] }}/drupal9"
-      #     --site-name="Testing Site Install"
-      #     --account-name="admin" --account-pass="password"
-      #     install_configure_form.enable_update_status_module=NULL
-      #     install_configure_form.enable_update_status_emails=NULL
-      - name: Run PHP Unit Tests
-        run: composer test
-  phplint:
-    name: Lint Code
+  # build:
+  #   name: Run Unit Tests
+  #   runs-on: ubuntu-latest
+  #   services:
+  #     mysql:
+  #       image: mysql:5.7
+  #       env:
+  #         MYSQL_ALLOW_EMPTY_PASSWORD: false
+  #         MYSQL_ROOT_PASSWORD: drupal9
+  #         MYSQL_DATABASE: drupal9
+  #       ports:
+  #         - 3306
+  #       options: --health-cmd="mysqladmin ping" --health-interval=10s --health-timeout=5s --health-retries=3
+  #   steps:
+  #     - name: Checkout Code
+  #       uses: actions/checkout@v2
+  #     - name: Set up PHP
+  #       uses: shivammathur/setup-php@v2
+  #       with:
+  #         php-version: '7.4'
+  #         extensions: mbstring, xml, ctype, iconv, intl, pdo_sqlite, mysql
+  #         tools: composer:v1
+  #     - name: Start mysql service
+  #       run: sudo /etc/init.d/mysql start
+  #     - name: Validate composer.json
+  #       run: composer validate
+  #     - name: Build Project
+  #       run: composer install
+  #     - name: Run PHP Unit Tests
+  #       run: composer test
+  behat:
+    name: Run Behat Tests
     runs-on: self-hosted
     steps:
       - name: Checkout Code
         uses: actions/checkout@v2
       - name: Validate composer.json
         run: /usr/share/composer validate
-      - name: Build Project
+      - name: Install Dependencies
         run: /usr/share/composer install
-      - name: Lint Code
-        run: /usr/share/composer lint
+      - name: Install Site
+        run: >
+          echo yes | ./vendor/bin/drush si d9_test_profile
+          --db-url="mysql://root:drupal9@127.0.0.1:3306/drupal9"
+          --site-name="Testing Site Install"
+          --account-name="admin" --account-pass="password"
+          install_configure_form.enable_update_status_module=NULL
+          install_configure_form.enable_update_status_emails=NULL
+      - name: Run Behat Tests
+        run: /usr/share/composer behat
+  
+  # phplint:
+  #   name: Lint Code
+  #   runs-on: self-hosted
+  #   steps:
+  #     - name: Checkout Code
+  #       uses: actions/checkout@v2
+  #     - name: Validate composer.json
+  #       run: /usr/share/composer validate
+  #     - name: Build Project
+  #       run: /usr/share/composer install
+  #     - name: Lint Code
+  #       run: /usr/share/composer lint
 
