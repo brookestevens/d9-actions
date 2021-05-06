@@ -49,30 +49,33 @@
     <testsuite name="build">
       <file>./core/tests/TestSuites/BuildTestSuite.php</file>
     </testsuite>
+    <testsuite name="custom-modules">
+      <file> ./modules/contrib/drupal_yourls/tests/src/Unit/DrupalYourlsTest.php </file>
+      <!-- <file> ./modules/contrib/drupal_yourls/tests/src/FunctionalJavaScript/ </file> -->
+    </testsuite>
   </testsuites>
   <listeners>
     <listener class="\Drupal\Tests\Listeners\DrupalListener">
     </listener>
   </listeners>
   <!-- Filter for coverage reports. -->
-  <filter>
-    <whitelist>
-      <directory>./core/includes</directory>
-      <directory>./core/lib</directory>
+  <coverage>
+    <include>
+        <directory>./core/includes</directory>
+        <directory>./core/lib</directory>
+        <directory>./core/modules</directory>
+        <directory>./modules</directory>
+    </include>
+    <exclude>
       <!-- Extensions can have their own test directories, so exclude those. -->
-      <directory>./core/modules</directory>
-      <exclude>
-        <directory>./core/modules/*/src/Tests</directory>
-        <directory>./core/modules/*/tests</directory>
-      </exclude>
-      <directory>./modules</directory>
-      <exclude>
-        <directory>./modules/*/src/Tests</directory>
-        <directory>./modules/*/tests</directory>
-        <directory>./modules/*/*/src/Tests</directory>
-        <directory>./modules/*/*/tests</directory>
-      </exclude>
+      <directory>./core/modules/*/src/Tests</directory>
+      <directory>./core/modules/*/tests</directory>
+      <directory>./modules/*/src/Tests</directory>
+      <directory>./modules/*/tests</directory>
+      <directory>./modules/*/*/src/Tests</directory>
+      <directory>./modules/*/*/tests</directory>
+      <!-- Ignore sites directory -->
       <directory>./sites</directory>
-     </whitelist>
-  </filter>
+    </exclude>
+  </coverage>
 </phpunit>
