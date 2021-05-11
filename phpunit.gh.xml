@@ -17,8 +17,11 @@
     <ini name="error_reporting" value="32767"/>
     <!-- Do not limit the amount of memory tests take to run. -->
     <ini name="memory_limit" value="-1"/>
+    <!-- connection urls -->
+    <env name="SIMPLETEST_BASE_URL" value="http://192.168.50.5" />
+    <env name="SIMPLETEST_DB" value="mysql://root:drupal9@127.0.0.1:3306/drupal9_test" />
     <!-- Example BROWSERTEST_OUTPUT_DIRECTORY value: /path/to/webroot/sites/simpletest/browser_output -->
-    <env name="BROWSERTEST_OUTPUT_DIRECTORY" value=""/>
+    <env name="BROWSERTEST_OUTPUT_DIRECTORY" value="./browser_output"/>
     <!-- To have browsertest output use an alternative base URL. For example if
      SIMPLETEST_BASE_URL is an internal DDEV URL, you can set this to the
      external DDev URL so you can follow the links directly.
@@ -49,9 +52,8 @@
     <testsuite name="build">
       <file>./core/tests/TestSuites/BuildTestSuite.php</file>
     </testsuite>
-    <testsuite name="custom-modules">
-      <file> ./modules/contrib/drupal_yourls/tests/src/Unit/DrupalYourlsTest.php </file>
-      <!-- <file> ./modules/contrib/drupal_yourls/tests/src/FunctionalJavaScript/ </file> -->
+    <testsuite name="profile">
+      <file> ./profiles/d9_test_profile/tests/src/Functional/D9TestProfileTest.php </file>
     </testsuite>
   </testsuites>
   <listeners>
