@@ -19,14 +19,17 @@ tooling:
     description: Run Behat Tests
     service: appserver
     cmd: "/app/vendor/bin/behat -c behat.local.yml"
-  test:
+  phpunit:
     description: Run Unit Tests with phpunit
     service: appserver
-    cmd: "composer test"
+    cmd: "/app/vendor/bin/phpunit -c phpunit.xml --debug"
 services:
   appserver:
     build:
       - composer install
+  database:
+    run_as_root:
+      - mysql -uroot -e "CREATE DATABASE IF NOT EXISTS drupal9_test; GRANT ALL PRIVILEGES ON drupal9_test.* TO 'lamp'@'%' IDENTIFIED by 'lamp';"
 config:
   php: '7.4'
   composer_version: '1.10.1'
