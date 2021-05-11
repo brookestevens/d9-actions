@@ -5,6 +5,7 @@ core_version_requirement: '^8.8 || ^9'
 # Modules to install to support the profile.
 install:
   - history
+  - automated_cron
   - block_content
   - breakpoint
   - color
