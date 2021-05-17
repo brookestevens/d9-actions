@@ -1,4 +1,3 @@
-uuid: f1364288-aa24-4f4b-b279-5a019c5df1f4
 langcode: en
 status: true
 dependencies:
@@ -8,8 +7,6 @@ dependencies:
     - system
   theme:
     - ucb2019_base
-_core:
-  default_config_hash: ChCx7DYNUrPTt5uiRdQAPDKJQMc-_SyAQTrZh8H0o-c
 id: ucb2019_base_main_menu
 theme: ucb2019_base
 region: primary_menu
