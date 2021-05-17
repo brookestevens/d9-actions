@@ -22,7 +22,7 @@ tooling:
   phpunit:
     description: Run Unit Tests with phpunit
     service: appserver
-    cmd: "/app/vendor/bin/phpunit -c phpunit.xml --debug"
+    cmd: "/app/vendor/bin/phpunit -c phpunit.local.xml --debug"
 services:
   appserver:
     build:
